@@ -1,0 +1,10 @@
+<ion-view>
+	<ion-nav-title>{{'cultivarsTitle'|translate}}</ion-nav-title>
+	<ion-content>
+		<ion-list>
+			<ion-item ng-repeat="cultivar in cultivars" href="#/app/cultivars/{{cultivar.id}}">
+				{{cultivar.title}}
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

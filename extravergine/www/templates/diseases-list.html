@@ -1,0 +1,16 @@
+<ion-view>
+	<ion-nav-title>{{'diseaseTitle'|translate}}</ion-nav-title>
+	<ion-content>
+		<ion-list>
+			<ion-item class="item item-thumbnail-left" ng-repeat="disease in diseases" href="#/app/diseases/{{disease.id}}">
+				<img ng-src="{{disease.image}}">
+				<h2>
+					<div class="list-item-title">
+						{{disease.title}}
+					</div>
+				</h2>
+				<p class="list-item-subtitle">{{disease.subTitle}}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

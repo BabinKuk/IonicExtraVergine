@@ -1,0 +1,16 @@
+<ion-view>
+	<ion-nav-title>{{'calendarTitle'|translate}}</ion-nav-title>
+	<ion-content>
+		<ion-list>
+			<ion-item class="item item-thumbnail-left" ng-repeat="month in calendar" href="#/app/calendar/{{month.id}}">
+				<img ng-src="{{month.image}}">
+				<h2>
+					<div class="list-item-title">
+						{{month.title}}
+					</div>
+				</h2>
+				<p class="list-item-subtitle">{{month.subTitle}}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

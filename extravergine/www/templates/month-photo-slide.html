@@ -1,0 +1,45 @@
+<ion-modal-view>
+	<!--div class="modal image-modal transparent" ng-click="closeModal()"-->
+		<!--ion-nav-bar>
+			<ion-nav-back-button>
+			</ion-nav-back-button>
+		
+			<ion-nav-buttons side="left">
+				<button class="button button-positive button-clear no-animation" ng-click="previous()" ng-show="slideIndex > 0">
+					Previous Slide
+				</button>
+			</ion-nav-buttons>
+			<ion-nav-buttons side="right"> 
+				<button class="button button-positive button-clear no-animation" ng-click="next()" ng-show="slideIndex != 2">
+					Next
+				</button>
+			</ion-nav-buttons>
+		</ion-nav-bar-->
+
+	<div class="modal image-modal transparent">
+		<ion-header-bar class="transparent buttons">
+			<div class="buttons button-right">
+				<button class="button icon ion-close-round" ng-click="closeModal()"></button>
+			</div>
+		</ion-header-bar>
+		
+		<ion-slide-box on-slide-changed="slideChanged(index)" show-pager="true">
+			<ion-slide ng-repeat="photo in photos">
+				<img ng-src="{{photo.src}}" class="fullscreen-image"/>
+				<!--p class="info">{{photo}}</p-->
+			</ion-slide>
+		</ion-slide-box>
+		
+		<!--ion-footer-bar>
+			<ion-nav-bar>
+				<ion-nav-back-button>
+				</ion-nav-back-button>
+			
+				<ion-nav-buttons side="right"> 
+					<button class="button icon ion-close-round" ng-click="closeModal()"></button>
+				</ion-nav-buttons>
+			</ion-nav-bar>
+		</ion-footer-bar-->
+		
+	</div>
+</ion-modal-view>

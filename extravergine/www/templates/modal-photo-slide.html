@@ -1,0 +1,23 @@
+<ion-modal-view>
+	<div class="modal image-modal transparent">
+		<ion-header-bar class="transparent buttons">
+			<div class="buttons button-right">
+				<button class="button icon ion-close-round" ng-click="closeModal()"></button>
+			</div>
+		</ion-header-bar>
+		
+		<!--h1>{{selectedSlide}}</h1-->
+		<!--ion-slides options="modalSlidesOptions" slider="slider">
+			<ion-slide-page ng-repeat="photo in photos">
+				<img ng-src="{{photo.src}}" class="fullscreen-image"/>
+			</ion-slide-page>
+		</ion-slides-->
+		
+		<ion-slide-box on-slide-changed="slideChanged(index)" show-pager="false">
+			<ion-slide ng-repeat="photo in photos">
+				<img ng-src="{{photo.src}}" class="fullscreen-image"/>
+			</ion-slide>
+		</ion-slide-box>
+		
+	</div>
+</ion-modal-view>
