@@ -230,11 +230,14 @@ angular.module('extravergine.controllers', [])
 	$scope.photos = '';
 	$scope.selectedSlide = '';
 	
-	$scope.swiperOptions = {
+	$scope.swiperThumbOptions = {
 		/* Swiper options */
 		effect: 'slide',
 		initialSlide: 0,
-		slidesPerView: 3,
+		//centeredSlides: true,
+        slidesPerView: 3,
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
 		spaceBetween: 2,
 		/*pagination: '.swiper-pagination',*/
 		/*paginationClickable: true,*/
@@ -246,6 +249,7 @@ angular.module('extravergine.controllers', [])
 		onInit: function(swiper){
 			$scope.swiper = swiper;
 			// Now you can do whatever you want with the swiper
+			console.log(swiper);
 		},
 		onSlideChangeEnd: function(swiper){
 			console.log('The active index is ' + swiper.activeIndex); 

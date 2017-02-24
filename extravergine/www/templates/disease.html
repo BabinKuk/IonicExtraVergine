@@ -1,44 +1,76 @@
 <ion-view>
 	<ion-nav-title>{{disease.title}}</ion-nav-title>
 	<ion-content>
-		<div class="img-wrapper">
-			<div class="swiper-container gallery-top">
-				<!-- Additional required wrapper -->
-				<div class="swiper-wrapper">
-					<img class="image-top" ng-src="{{disease.image}}"/>
+	
+		<div class="list card">
+	
+			<div class="item item-image">
+				<div class="img-wrapper">
+					<div class="swiper-container gallery-top">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<img class="image-top" ng-src="{{disease.image}}"/>
+						</div>
+						<!-- Add Arrows -->
+						<!--div class="swiper-button-next swiper-button-white"></div-->
+						<!--div class="swiper-button-prev swiper-button-white"></div-->
+					</div>
+					<div class="swiper-container gallery-thumbs">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<ion-slides class="slides-table" slider="swiper" options="swiperThumbOptions">
+								<ion-slide-page class="swiper-slide" ng-repeat="photo in photos">
+									<img class="item-image" ng-src="{{photo.src}}" ng-click="openModal({{$index}})"/>
+								</ion-slide-page>
+							</ion-slides>
+						</div>
+					</div>
 				</div>
-				<!-- Add Arrows -->
-				<!--div class="swiper-button-next swiper-button-white"></div-->
-				<!--div class="swiper-button-prev swiper-button-white"></div-->
 			</div>
-			<div class="swiper-container gallery-thumbs">
-				<!-- Additional required wrapper -->
-				<div class="swiper-wrapper">
-					<!-- Slides -->
-					<ion-slides class="slides-table" slider="swiper" options="swiperThumbOptions">
-						<ion-slide-page class="swiper-slide" ng-repeat="photo in photos">
-							<img class="item-image" ng-src="{{photo.src}}" ng-click="openModal({{$index}})"/>
-						</ion-slide-page>
-					</ion-slides>
-				</div>
+			
+			<div class="item item-divider">
+				{{'title'|translate}}
 			</div>
+			<div class="item item-text-wrap">
+				{{disease.latinTitle}}
+			</div>
+			<div class="item item-divider">
+				{{'description'|translate}}
+			</div>
+			<div class="item item-text-wrap">
+				{{disease.description}}
+			</div>
+			<div class="item item-divider">
+				{{'symptoms'|translate}}
+			</div>
+			<div class="item item-text-wrap">
+				{{disease.symptoms}}
+			</div>
+			<div class="item item-divider">
+				{{'prevention'|translate}}
+			</div>
+			<div class="item item-text-wrap">
+				{{disease.prevention}}
+			</div>
+			
+			<!--div class="container">
+				<h2>{{'title'|translate}}</h2>
+				<p>{{disease.latinTitle}}</p>
+				
+				<h2>{{'description'|translate}}</h2>
+				<p>{{disease.description}}</p>
+				
+				<h2>{{'symptoms'|translate}}</h2>
+				<p>{{disease.symptoms}}</p>
+				
+				<h2>{{'prevention'|translate}}</h2>
+				<p>{{disease.prevention}}</p>
+			</div-->
+			<!--p>
+				<a class="button icon icon-right ion-chevron-right" ng-click="openModal(0)">{{'gallery'|translate}}</a>
+			</p-->
 		</div>
-		
-		<div class="container">
-			<h2>{{'title'|translate}}</h2>
-			<p>{{disease.latinTitle}}</p>
-			
-			<h2>{{'description'|translate}}</h2>
-			<p>{{disease.description}}</p>
-			
-			<h2>{{'symptoms'|translate}}</h2>
-			<p>{{disease.symptoms}}</p>
-			
-			<h2>{{'prevention'|translate}}</h2>
-			<p>{{disease.prevention}}</p>
-		</div>
-		<!--p>
-			<a class="button icon icon-right ion-chevron-right" ng-click="openModal(0)">{{'gallery'|translate}}</a>
-		</p-->
+	
 	</ion-content>
 </ion-view>

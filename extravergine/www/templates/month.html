@@ -1,7 +1,47 @@
 <ion-view>
 	<ion-nav-title>{{month.title}}</ion-nav-title>
 	<ion-content>
-		<img class="itemImage" ng-src="{{month.image}}"/>
+		
+		<div class="list card">
+			<div class="item item-image">
+				<div class="img-wrapper">
+					<div class="swiper-container gallery-top">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<img class="image-top" ng-src="{{month.image}}"/>
+						</div>
+						<!-- Add Arrows -->
+						<!--div class="swiper-button-next swiper-button-white"></div-->
+						<!--div class="swiper-button-prev swiper-button-white"></div-->
+					</div>
+					<div class="swiper-container gallery-thumbs">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<ion-slides class="slides-table" slider="swiper" options="swiperThumbOptions">
+								<ion-slide-page class="swiper-slide" ng-repeat="photo in photos">
+									<img class="item-image" ng-src="{{photo.src}}" ng-click="openModal({{$index}})"/>
+								</ion-slide-page>
+							</ion-slides>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div ng-repeat="(key, value) in month">
+				<div ng-if="key != 'id' && key != 'subTitle' && key != 'image' && key != 'title' && key != 'imageArray'">
+					<div class="item item-divider">
+						{{key | translate}}
+					</div>
+					<div class="item item-text-wrap">
+						{{value}}
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		<!--
+		<img class="" ng-src="{{month.image}}"/>
 		
 		<ion-slides class="slides-table" slider="swiper" options="swiperOptions">
 			<ion-slide-page ng-repeat="photo in photos">
@@ -15,9 +55,9 @@
 				<p>{{value}}</p>
 			</div>
 		</div>
-		
-		<p>
+		-->
+		<!--p>
 			<a class="button icon icon-right ion-chevron-right" ng-click="openModal(0)">{{'gallery'|translate}}</a>
-		</p>
+		</p-->
 	</ion-content>
 </ion-view>

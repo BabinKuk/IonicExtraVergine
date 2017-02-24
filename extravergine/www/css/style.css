@@ -28,36 +28,44 @@
 }
 #img-col-cultivar1 {
     background-image: url(../img/cultivars/ulje1.jpg);
+	background-position: 25% 35%;
 }
 #img-col-cultivar2 {
     background-image: url(../img/cultivars/ulje2.jpg);
+	background-position: 25% 50%;
 }
 #img-col-cultivar3 {
     background-image: url(../img/cultivars/ulje3.jpg);
+	background-position: 25% 35%;
 }
 #img-col-calendar1 {
     background-image: url(../img/calendar/ozujak.jpg);
+	background-position: 25% 35%;
 }
 #img-col-calendar2 {
     background-image: url(../img/calendar/pomladjivanje3.jpg);
+	background-position: 25% 35%;
 }
 #img-col-calendar3 {
     background-image: url(../img/calendar/listopad.jpg);
+	background-position: 25% 35%;
 }
 #img-col-disease1 {
     background-image: url(../img/diseases/paunovooko.jpg);
+	background-position: 25% 65%;
 }
 #img-col-disease2 {
     background-image: url(../img/diseases/mmuha.jpg);
+	background-position: 25% 85%;
 }
 #img-col-disease3 {
     background-image: url(../img/diseases/mmoljac.jpg);
+	background-position: 25% 45%;
 }
 .img-col{
 	height: 9em;
 	background-repeat: no-repeat;
     background-size: cover;
-    background-position: 25% 35%;
 }
 .transparent {
 	background: transparent !important;
@@ -142,15 +150,18 @@ p.info {
 	background-position: center;
 }
 .gallery-top {
-	height: 80%;
+	/*height: 80%;*/
 	width: 100%;
 	max-width: 100%;
 }
 .image-top {
 	width: 100% !important;
-	height: 100%;
-	max-width: 100%;
-	max-height: 100%;
+	height: auto  !important;
+	/*max-width: 100%;
+	max-height: 100%;*/
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 .gallery-thumbs {
 	height: 20%;
@@ -165,7 +176,6 @@ p.info {
 .gallery-thumbs .swiper-slide-active {
 	opacity: 1;
 }
-
 .lang-radio span {
 	position: absolute;
 	top: 50%;
@@ -174,7 +184,9 @@ p.info {
     font-size: 100%;
 	transform: translateY(-50%);
 }
-
+.item-divider, .item-text-wrap{
+	padding-top: 20px;
+}
 /* remove the back button default text */
 .back-button > .back-text > .default-title {
     display:none;
@@ -216,4 +228,5 @@ p.info {
 		background-size: cover;
 		background-position: 25% 35%;*/
 	}
+	
 }
