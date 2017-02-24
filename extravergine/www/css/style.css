@@ -180,6 +180,11 @@ p.info {
 }
 .gallery-thumbs .swiper-slide-active {
 	opacity: 1;
+    /* display: block; */
+}
+.swiper-slide img {
+	object-fit: contain;
+	overflow: hidden;
 }
 .lang-radio span {
 	position: absolute;
