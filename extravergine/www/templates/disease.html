@@ -21,7 +21,7 @@
 							<!-- Slides -->
 							<ion-slides class="slides-table" slider="swiper" options="swiperThumbOptions">
 								<ion-slide-page class="swiper-slide" ng-repeat="photo in photos">
-									<img class="item-image" ng-src="{{photo.src}}" ng-click="openModal({{$index}})"/>
+									<img ng-src="{{photo.src}}" ng-click="openModal({{$index}})"/>
 								</ion-slide-page>
 							</ion-slides>
 						</div>

@@ -3,28 +3,29 @@
 	<ion-content>
 		
 		<div class="list card">
-			<!--start div class="item item-image">
+			
+			<div class="item item-image">
 				<div class="img-wrapper">
-					<div class="swiper-container gallery-top" stop-->
+					<div class="swiper-container gallery-top">
 						<!-- Additional required wrapper -->
-						<!--start div class="swiper-wrapper">
+						<div class="swiper-wrapper">
 							<img class="image-top" ng-src="{{month.image}}"/>
 						</div>
 					</div>
-					<div class="swiper-container gallery-thumbs"stop-->
+					<div class="swiper-container gallery-thumbs">
 						<!-- Additional required wrapper -->
-						<!--start div class="swiper-wrapper" stop-->
+						< div class="swiper-wrapper" >
 							<!-- Slides -->
-							<!--start ion-slides class="slides-table" slider="swiper" options="swiperThumbOptions">
+							< ion-slides class="slides-table" slider="swiper" options="swiperThumbOptions">
 								<ion-slide-page class="swiper-slide" ng-repeat="photo in photos">
-									<img class="item-image" ng-src="{{photo.src}}" ng-click="openModal({{$index}})"/>
+									<img ng-src="{{photo.src}}" ng-click="openModal({{$index}})"/>
 								</ion-slide-page>
 							</ion-slides>
 						</div>
 					</div>
 				</div>
-			</div stop-->
-			<div class="item item-image">
+			</div >
+			<!--div class="item item-image">
 				<img ng-src="{{month.image}}"/>
 				<div class="img-wrapper">
 					<div class="swiper-container gallery-thumbs">
@@ -37,7 +38,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div-->
 			
 			<div ng-repeat="(key, value) in month">
 				<div ng-if="key != 'id' && key != 'subTitle' && key != 'image' && key != 'title' && key != 'imageArray'">
