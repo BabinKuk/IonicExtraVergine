@@ -26,23 +26,18 @@
 			</div stop-->
 			<div class="item item-image">
 				<img ng-src="{{month.image}}"/>
-			<!--/div-->
-			<!--div class="item"-->
 				<div class="img-wrapper">
 					<div class="swiper-container gallery-thumbs">
-					<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
-							<!-- Slides -->
 							<ion-slides class="slides-table" slider="swiper" options="swiperThumbOptions">
 								<ion-slide-page class="swiper-slide" ng-repeat="photo in photos">
-									<img class="item-image" ng-src="{{photo.src}}" ng-click="openModal({{$index}})"/>
+									<img ng-src="{{photo.src}}" ng-click="openModal({{$index}})"/>
 								</ion-slide-page>
 							</ion-slides>
 						</div>
 					</div>
 				</div>
 			</div>
-			
 			
 			<div ng-repeat="(key, value) in month">
 				<div ng-if="key != 'id' && key != 'subTitle' && key != 'image' && key != 'title' && key != 'imageArray'">
@@ -57,14 +52,6 @@
 		
 		</div>
 		<!--
-		<img class="" ng-src="{{month.image}}"/>
-		
-		<ion-slides class="slides-table" slider="swiper" options="swiperOptions">
-			<ion-slide-page ng-repeat="photo in photos">
-				<img class="item-image" ng-src="{{photo.src}}" ng-click="openModal({{$index}})"/>
-			</ion-slide-page>
-		</ion-slides>
-		
 		<div ng-repeat="(key, value) in month">
 			<div ng-if="key != 'id' && key != 'subTitle' && key != 'image' && key != 'title' && key != 'imageArray'">
 				<h2>{{key | translate}}</h2>
