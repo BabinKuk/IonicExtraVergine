@@ -165,7 +165,7 @@ p.info {
 	display: block;
 }
 .gallery-thumbs {
-	height: 20%;
+	/*height: 20%;*/
 	box-sizing: border-box;
 	padding: 10px 0;
 }
@@ -207,9 +207,9 @@ p.info {
 	.gallery-top {
 		height: 70%;
 	}
-	.gallery-thumbs {
+	/*.gallery-thumbs {
 		height: 30%;
-	}
+	}*/
 	.image-top {
 		width: 100% !important;
 		height: auto  !important;
