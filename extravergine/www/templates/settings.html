@@ -3,14 +3,8 @@
 	<ion-content>
 		<ion-list>
 			<ion-item class="item item-divider">
-					<div><span class="padding">{{'langTitle'|translate}}</span></div>
-				</ion-item>
-			<ion-radio class="lang-radio" ng-model="language" ng-value="'HR'" ng-click="setLanguage(language)">
-				<div class="row">
-					<div class="col col-10"><img src="img/hr.png"/></div>
-					<div class="col col-90">HR</div>
-				</div>
-			</ion-radio>
+				<div><span class="padding">{{'langTitle'|translate}}</span></div>
+			</ion-item>
 			<ion-radio ng-model="language" ng-value="'HR'" ng-click="setLanguage(language)"><div class="lang-radio"><img src="img/hr.png"/><span>HR</span></div></ion-radio>
 			<ion-radio ng-model="language" ng-value="'IT'" ng-click="setLanguage(language)"><div class="lang-radio"><img src="img/it.png"/><span>IT</span></div></ion-radio>
 			<ion-radio ng-model="language" ng-value="'EN'" ng-click="setLanguage(language)"><div class="lang-radio"><img src="img/en.png"/><span>EN</span></div></ion-radio>
