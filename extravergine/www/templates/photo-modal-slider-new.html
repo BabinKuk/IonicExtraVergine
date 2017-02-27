@@ -1,5 +1,5 @@
 <ion-modal-view>
-	<div class="modal image-modal transparent">
+	<div class="modal image-modal transparent modal-image-container">
 		<ion-header-bar class="transparent buttons">
 			<div class="buttons button-right">
 				<button class="button icon ion-close-round" ng-click="closeModal()"></button>
@@ -8,9 +8,9 @@
 		
 		<ion-slides options="options" slider="slider" on-slide-changed="slideChanged(index)" >
 			<ion-slide-page ng-repeat="photo in photos">
-				<div class="modal-image-container">
+				<!--div class="modal-image-container"-->
 					<img ng-src="{{photo.src}}" class="fullscreen-image"/>
-			    </div>
+			    <!--/div-->
 			</ion-slide-page>
 		</ion-slides>
 	</div>
