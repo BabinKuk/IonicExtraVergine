@@ -8,7 +8,9 @@
 		
 		<ion-slides options="options" slider="slider" on-slide-changed="slideChanged(index)" >
 			<ion-slide-page ng-repeat="photo in photos">
-				<img ng-src="{{photo.src}}" class="fullscreen-image"/>
+				<div class="modal-image-container">
+					<img ng-src="{{photo.src}}" class="fullscreen-image"/>
+			    </div>
 			</ion-slide-page>
 		</ion-slides>
 	</div>
