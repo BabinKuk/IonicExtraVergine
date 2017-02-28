@@ -3,13 +3,13 @@
 }
 .center-element {
 	width: 50%;
-	margin: 20px auto;
+	margin: 10px auto;
 }
 .details-button{
 	width: 100%;
 	font-weight: bold;
 	color: #ffffff;
-	background-color: #ff9900;
+	/*background-color: #ff9900;*/
 }
 .list-item-title{
 	margin: 5px;
@@ -232,5 +232,4 @@ p.info {
 	.img-col{
 		height: 15em;
 	}
-	
 }
