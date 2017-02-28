@@ -7,11 +7,17 @@
 			</div>
 		</ion-header-bar>
 		
-		<ion-slide-box on-slide-changed="slideChanged(index)" show-pager="false">
-			<ion-slide ng-repeat="photo in photos">
-				<img ng-src="{{photo.src}}" class="fullscreen-image"/>
-			</ion-slide>
-		</ion-slide-box>
+		<ion-pane class="transparent">
+			<ion-slide-box on-slide-changed="slideChanged(index)" show-pager="false">
+				<ion-slide ng-repeat="photo in photos">
+					<img ng-src="{{photo.src}}" class="fullscreen-image"/>
+				</ion-slide>
+			</ion-slide-box>
+		</ion-pane>
+		
+		<!--ion-pane class="transparent">
+			<img ng-src="{{photo.src}}" class="fullscreen-image"/>
+		</ion-pane-->
 		
 	</div>
 </ion-modal-view>
