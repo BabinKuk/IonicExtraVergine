@@ -137,7 +137,6 @@ var translations = {
 					{'src' : 'img/diseases/mmuha.jpg'},
 					{'src' : 'img/diseases/mmuha1.jpg'},
 					{'src' : 'img/diseases/mmuha2.jpg'},
-					{'src' : 'img/diseases/mmuha3.jpg'},
 					{'src' : 'img/diseases/mmuha4.jpg'},
 					{'src' : 'img/diseases/mmuha5.jpg'}
 				]
@@ -234,8 +233,7 @@ var translations = {
 					{'src' : 'img/diseases/pipa.jpg'},
 					{'src' : 'img/diseases/pipa1.jpg'},
 					{'src' : 'img/diseases/pipa2.jpg'},
-					{'src' : 'img/diseases/pipa3.jpg'},
-					{'src' : 'img/diseases/pipa4.jpg'}
+					{'src' : 'img/diseases/pipa3.jpg'}
 				]
 			},
 			{
@@ -695,7 +693,6 @@ var translations = {
 					{'src' : 'img/calendar/navodnjavanje1.jpg'},
 					{'src' : 'img/diseases/mmuha.jpg'},
 					{'src' : 'img/diseases/mmuha1.jpg'},
-					{'src' : 'img/diseases/mmuha3.jpg'},
 					{'src' : 'img/calendar/prskanje1.jpg'}
 				]
 			},
@@ -910,7 +907,6 @@ var translations = {
 					{'src' : 'img/diseases/mmuha.jpg'},
 					{'src' : 'img/diseases/mmuha1.jpg'},
 					{'src' : 'img/diseases/mmuha2.jpg'},
-					{'src' : 'img/diseases/mmuha3.jpg'},
 					{'src' : 'img/diseases/mmuha4.jpg'},
 					{'src' : 'img/diseases/mmuha5.jpg'}
 				]
@@ -1007,8 +1003,7 @@ var translations = {
 					{'src' : 'img/diseases/pipa.jpg'},
 					{'src' : 'img/diseases/pipa1.jpg'},
 					{'src' : 'img/diseases/pipa2.jpg'},
-					{'src' : 'img/diseases/pipa3.jpg'},
-					{'src' : 'img/diseases/pipa4.jpg'}
+					{'src' : 'img/diseases/pipa3.jpg'}
 				]
 			},
 			{
@@ -1469,7 +1464,6 @@ var translations = {
 					{'src' : 'img/calendar/navodnjavanje1.jpg'},
 					{'src' : 'img/diseases/mmuha.jpg'},
 					{'src' : 'img/diseases/mmuha1.jpg'},
-					{'src' : 'img/diseases/mmuha3.jpg'},
 					{'src' : 'img/calendar/prskanje1.jpg'}
 				]
 			},
@@ -1678,7 +1672,6 @@ var translations = {
 					{'src' : 'img/diseases/mmuha.jpg'},
 					{'src' : 'img/diseases/mmuha1.jpg'},
 					{'src' : 'img/diseases/mmuha2.jpg'},
-					{'src' : 'img/diseases/mmuha3.jpg'},
 					{'src' : 'img/diseases/mmuha4.jpg'},
 					{'src' : 'img/diseases/mmuha5.jpg'}
 				]
@@ -1775,8 +1768,7 @@ var translations = {
 					{'src' : 'img/diseases/pipa.jpg'},
 					{'src' : 'img/diseases/pipa1.jpg'},
 					{'src' : 'img/diseases/pipa2.jpg'},
-					{'src' : 'img/diseases/pipa3.jpg'},
-					{'src' : 'img/diseases/pipa4.jpg'}
+					{'src' : 'img/diseases/pipa3.jpg'}
 				]
 			},
 			{
@@ -2236,7 +2228,6 @@ var translations = {
 					{'src' : 'img/calendar/navodnjavanje1.jpg'},
 					{'src' : 'img/diseases/mmuha.jpg'},
 					{'src' : 'img/diseases/mmuha1.jpg'},
-					{'src' : 'img/diseases/mmuha3.jpg'},
 					{'src' : 'img/calendar/prskanje1.jpg'}
 				]
 			},
