@@ -233,7 +233,7 @@ var translations = {
 					{'src' : 'img/diseases/pipa.jpg'},
 					{'src' : 'img/diseases/pipa1.jpg'},
 					{'src' : 'img/diseases/pipa2.jpg'},
-					{'src' : 'img/diseases/pipa3.jpg'}
+					{'src' : 'img/diseases/pipa4.jpg'}
 				]
 			},
 			{
@@ -1003,7 +1003,7 @@ var translations = {
 					{'src' : 'img/diseases/pipa.jpg'},
 					{'src' : 'img/diseases/pipa1.jpg'},
 					{'src' : 'img/diseases/pipa2.jpg'},
-					{'src' : 'img/diseases/pipa3.jpg'}
+					{'src' : 'img/diseases/pipa4.jpg'}
 				]
 			},
 			{
@@ -1768,7 +1768,7 @@ var translations = {
 					{'src' : 'img/diseases/pipa.jpg'},
 					{'src' : 'img/diseases/pipa1.jpg'},
 					{'src' : 'img/diseases/pipa2.jpg'},
-					{'src' : 'img/diseases/pipa3.jpg'}
+					{'src' : 'img/diseases/pipa4.jpg'}
 				]
 			},
 			{
