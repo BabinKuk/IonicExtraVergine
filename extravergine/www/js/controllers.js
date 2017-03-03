@@ -1,6 +1,6 @@
 angular.module('extravergine.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $translate) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $translate, $ionicPopup) {
 
 	// With the new view caching in Ionic, Controllers are only called
 	// when they are recreated or on app start, instead of every page change.
@@ -14,7 +14,7 @@ angular.module('extravergine.controllers', [])
 	
 	$scope.setLanguage = function(lang){
 		localStorage.setItem('language', lang);
-		console.log(lang + ' language set');
+		//console.log(lang + ' language set');
 		$translate.use(getLanguage());
 	}
 	
@@ -22,7 +22,7 @@ angular.module('extravergine.controllers', [])
 	$scope.language = getLanguage();
 	
 	$scope.sendMail = function(){
-		console.log('sendMail ' + $scope.deviceInformation);
+		//console.log('sendMail ' + $scope.deviceInformation);
 		
 		$scope.deviceInformation = getDeviceInfo();
 		//console.log($scope.deviceInformation);
@@ -32,6 +32,30 @@ angular.module('extravergine.controllers', [])
 		
 		window.open(mailto, '_system')
 	}
+	
+	//alert dialog
+	$scope.showPopup = function() {
+		console.log(translations);
+		var popupText = getPopupText(getLanguage());
+		console.log(popupText.attention);
+
+		// An elaborate, custom popup
+		var confirmPopup = $ionicPopup.confirm({
+			title: popupText.attention,
+			type: 'button-balanced',
+			template: popupText.attentionDesc
+		}).then(function(res) {
+			if (res) {
+				ionic.Platform.exitApp();
+			}
+		});
+	};
+	
+	function getPopupText(lang){
+		console.log('getPopupText ' + lang);
+		return translations[lang];
+	}
+	
 })
 
 .controller('CultivarsCtrl', function($scope, $translate, CultivarList) {
