@@ -42,7 +42,7 @@ angular.module('extravergine.controllers', [])
 		event.preventDefault();
 		console.log("back button action handler");
 		console.log($state.current);
-		/*
+		
 		if($state.current.name == "app.cultivars"){
 			console.log('home page -> exit app');
 			showExitAppPopup();
@@ -50,15 +50,14 @@ angular.module('extravergine.controllers', [])
 		} else {
 			console.log('app.backhistory');
 			navigator.app.backHistory();
-		}*/
+		}
 	}, 100);
 	
 	// exit app handler function
 	function showExitAppPopup(){
 		console.log('showExitAppPopup');
 		console.log(translations);
-		//test
-		console.log($state.current);
+		
 		var popupText = getPopupText(getLanguage());
 		console.log(popupText.attention);
 
@@ -79,7 +78,6 @@ angular.module('extravergine.controllers', [])
 		console.log('getPopupText ' + lang);
 		return translations[lang];
 	}
-	
 })
 
 .controller('CultivarsCtrl', function($scope, $translate, CultivarList) {

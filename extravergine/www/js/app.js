@@ -168,24 +168,3 @@ function getDeviceInfo() {
 	//console.log(ionic.Platform.device());
 	return ionic.Platform.device();
 }
-
-/*
-// display popup to exit app
-function showExitAppPopup(ionicPopup){
-	console.log('showExitAppPopup');
-	console.log(translations);
-	var popupText = getPopupText(getLanguage());
-	console.log(popupText.attention);
-
-	// custom popup
-	var confirmPopup = ionicPopup.confirm({
-		title: popupText.attention,
-		type: 'button-balanced',
-		template: popupText.attentionDesc
-	}).then(function(res) {
-		if (res) {
-			ionic.Platform.exitApp();
-		}
-	});
-}
-*/
