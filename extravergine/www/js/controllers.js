@@ -70,6 +70,12 @@ angular.module('extravergine.controllers', [])
 	$scope.cultivar = '';
 	$scope.modal = '';
 	
+	$ionicPlatform.registerBackButtonAction(function (event) { 
+		event.preventDefault();
+		console.log('back button action handler');
+		showPopup();
+	}, 999);
+	
 	//check id first
     if($stateParams.cultivarId != undefined){
 		// get particular cultivar using service
