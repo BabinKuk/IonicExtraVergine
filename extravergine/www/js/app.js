@@ -2,7 +2,7 @@
 
 document.addEventListener('deviceready', function () {
     // cordova.plugins.email is now available
-	console.log('deviceready....');
+	//console.log('deviceready....');
 }, false);
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -22,7 +22,7 @@ angular.module('extravergine', ['ionic', 'extravergine.controllers', 'extravergi
 			cordova.plugins.email.isAvailable(
 				function (isAvailable) {
 					// alert('Service is not available') unless isAvailable;
-					console.log('Email service: ' + isAvailable);
+					//console.log('Email service: ' + isAvailable);
 				}
 			);
 		}
@@ -46,7 +46,7 @@ angular.module('extravergine', ['ionic', 'extravergine.controllers', 'extravergi
 	
 	for(lang in translations){
 		$translateProvider.translations(lang, translations[lang]);
-		console.log('lang in translations: ' + lang);
+		//console.log('lang in translations: ' + lang);
 	}
 	$translateProvider.preferredLanguage(getLanguage());
 	
@@ -159,7 +159,7 @@ function getLanguage(){
 	} else {
 		language = localStorage.getItem('language');
 	}
-	console.log('get language ' + language);
+	//console.log('get language ' + language);
 	return language;
 }
 

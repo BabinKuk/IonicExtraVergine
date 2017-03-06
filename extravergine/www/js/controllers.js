@@ -40,27 +40,25 @@ angular.module('extravergine.controllers', [])
 	// back button handling
 	$ionicPlatform.registerBackButtonAction(function (event) {
 		event.preventDefault();
-		console.log("back button action handler");
-		console.log($state.current);
+		//console.log("back button action handler");
 		
 		if($state.current.name == "app.cultivars"){
-			console.log('home page -> exit app');
+			//console.log('home page -> exit app');
+			//exit app popup
 			showExitAppPopup();
-			//navigator.app.exitApp(); //<-- remove this line to disable the exit
 		} else {
-			console.log('app.backhistory');
+			//console.log('app.backhistory');
 			navigator.app.backHistory();
 		}
 	}, 100);
 	
 	// exit app handler function
 	function showExitAppPopup(){
-		console.log('showExitAppPopup');
-		console.log(translations);
+		//console.log('showExitAppPopup');
+		//console.log(translations);
 		
 		var popupText = getPopupText(getLanguage());
-		console.log(popupText.attention);
-
+		
 		// custom popup
 		var confirmPopup = $ionicPopup.confirm({
 			title: popupText.attention,
@@ -75,7 +73,7 @@ angular.module('extravergine.controllers', [])
 	
 	// get popup text translations
 	function getPopupText(lang){
-		console.log('getPopupText ' + lang);
+		//console.log('getPopupText ' + lang);
 		return translations[lang];
 	}
 })
@@ -103,12 +101,12 @@ angular.module('extravergine.controllers', [])
 		scope: $scope,
 		animation: 'slide-in-up'
 	}).then(function(modal) {
-		console.log($scope);
+		//console.log($scope);
 		$scope.modal = modal;
 	});
 	
 	$scope.openModal = function(slide) {
-		console.log('openModal ' + slide);
+		//console.log('openModal ' + slide);
 		$scope.photos = $scope.cultivar.imageArray;
 		$ionicSlideBoxDelegate.slide(slide);
 		//console.log($scope.photos);
@@ -133,14 +131,14 @@ angular.module('extravergine.controllers', [])
 	
 	// screen orientation listener
 	window.addEventListener("orientationchange", function(){
-		console.log(screen.orientation);
+		//console.log(screen.orientation);
 		
 		// if modal is shown, re-open modal
 		if ($scope.modal.isShown()) {
-			console.log('re-open modal');
+			//console.log('re-open modal');
 			$scope.modal.hide();
 			setTimeout(function(){
-				console.log($ionicSlideBoxDelegate.currentIndex());
+				//console.log($ionicSlideBoxDelegate.currentIndex());
 				$scope.openModal($ionicSlideBoxDelegate.currentIndex())
 			}, 500);
 		}
@@ -181,10 +179,10 @@ angular.module('extravergine.controllers', [])
 		onInit: function(swiper){
 			$scope.swiper = swiper;
 			// Now you can do whatever you want with the swiper
-			console.log(swiper);
+			//console.log(swiper);
 		},
 		onSlideChangeEnd: function(swiper){
-			console.log('The active index is ' + swiper.activeIndex); 
+			//console.log('The active index is ' + swiper.activeIndex); 
 		}
 	};
 	
@@ -201,13 +199,13 @@ angular.module('extravergine.controllers', [])
 		scope: $scope,
 		animation: 'slide-in-up'
 	}).then(function(modal) {
-		console.log($scope);
+		//console.log($scope);
 		$scope.modal = modal;
 	});
 	
 	$scope.openModal = function(index) {
 		//console.log($scope.photos);
-		console.log('openModal ' + index);
+		//console.log('openModal ' + index);
 		$scope.selectedSlide = index;
 		//$scope.photos = $scope.disease.imageArray;
 		//console.log($ionicSlideBoxDelegate.slide(index));
@@ -230,31 +228,29 @@ angular.module('extravergine.controllers', [])
 	
 	// Called each time the slide changes
     $scope.slideChanged = function(index) {
-		console.log('slideChanged disease');
+		//console.log('slideChanged disease');
 		$scope.slideIndex = index;
-		console.log($scope.photos[index]);
+		//console.log($scope.photos[index]);
     };
 	
 	// screen orientation listener
 	window.addEventListener("orientationchange", function(){
-		console.log(screen.orientation);
-		/*
-		console.log(document.getElementsByTagName('ion-modal-view')[0].clientWidth);
+		//console.log(screen.orientation);
+		//console.log(document.getElementsByTagName('ion-modal-view')[0].clientWidth);
 		//console.log(document.getElementsByTagName('div'));		
-		console.log(document.querySelectorAll('div.modal.image-modal.transparent')[0]);
-		console.log(document.querySelectorAll('div.modal.image-modal.transparent')[0].clientWidth);
+		//console.log(document.querySelectorAll('div.modal.image-modal.transparent')[0]);
+		//console.log(document.querySelectorAll('div.modal.image-modal.transparent')[0].clientWidth);
 		//$ionicSlideBoxDelegate.update();
 		//console.log(document.getElementsByTagName('ion-slide'));
 		//console.log($ionicSlideBoxDelegate.currentIndex());
-		console.log(document.getElementsByTagName('ion-slide')[$ionicSlideBoxDelegate.currentIndex()]);
+		//console.log(document.getElementsByTagName('ion-slide')[$ionicSlideBoxDelegate.currentIndex()]);
 		//document.getElementsByTagName('ion-slide')[$ionicSlideBoxDelegate.currentIndex()].style.transform = 'translate(0px, 0px) translateZ(0px)';
-		*/
 		// if modal is shown, re-open modal
 		if ($scope.modal.isShown()) {
 			//console.log('re-open modal');
 			$scope.modal.hide();
 			setTimeout(function(){
-				console.log('currentIndex ' + $ionicSlideBoxDelegate.currentIndex());
+				//console.log('currentIndex ' + $ionicSlideBoxDelegate.currentIndex());
 				$scope.openModal($ionicSlideBoxDelegate.currentIndex())
 			}, 500);
 		}
@@ -295,10 +291,10 @@ angular.module('extravergine.controllers', [])
 		onInit: function(swiper){
 			$scope.swiper = swiper;
 			// Now you can do whatever you want with the swiper
-			console.log(swiper);
+			//console.log(swiper);
 		},
 		onSlideChangeEnd: function(swiper){
-			console.log('The active index is ' + swiper.activeIndex); 
+			//console.log('The active index is ' + swiper.activeIndex); 
 		}
 	};
 	
@@ -314,13 +310,13 @@ angular.module('extravergine.controllers', [])
 		scope: $scope,
 		animation: 'slide-in-up'
 	}).then(function(modal) {
-		console.log($scope);
+		//console.log($scope);
 		$scope.modal = modal;
 	});
 	
 	$scope.openModal = function(index) {
 		//console.log($scope.photos);
-		console.log('openModal ' + index);
+		//console.log('openModal ' + index);
 		$scope.selectedSlide = index;
 		//$scope.photos = $scope.disease.imageArray;
 		//console.log($ionicSlideBoxDelegate.slide(index));
@@ -348,24 +344,22 @@ angular.module('extravergine.controllers', [])
 	
 	// screen orientation listener
 	window.addEventListener("orientationchange", function(){
-		console.log(screen.orientation);
-		/*
-		console.log(document.getElementsByTagName('ion-modal-view')[0].clientWidth);
+		//console.log(screen.orientation);
+		//console.log(document.getElementsByTagName('ion-modal-view')[0].clientWidth);
 		//console.log(document.getElementsByTagName('div'));		
-		console.log(document.querySelectorAll('div.modal.image-modal.transparent')[0]);
-		console.log(document.querySelectorAll('div.modal.image-modal.transparent')[0].clientWidth);
+		//console.log(document.querySelectorAll('div.modal.image-modal.transparent')[0]);
+		//console.log(document.querySelectorAll('div.modal.image-modal.transparent')[0].clientWidth);
 		//$ionicSlideBoxDelegate.update();
 		//console.log(document.getElementsByTagName('ion-slide'));
 		//console.log($ionicSlideBoxDelegate.currentIndex());
-		console.log(document.getElementsByTagName('ion-slide')[$ionicSlideBoxDelegate.currentIndex()]);
+		//console.log(document.getElementsByTagName('ion-slide')[$ionicSlideBoxDelegate.currentIndex()]);
 		//document.getElementsByTagName('ion-slide')[$ionicSlideBoxDelegate.currentIndex()].style.transform = 'translate(0px, 0px) translateZ(0px)';
-		*/
 		// if modal is shown, re-open modal
 		if ($scope.modal.isShown()) {
-			console.log('re-open modal');
+			//console.log('re-open modal');
 			$scope.modal.hide();
 			setTimeout(function(){
-				console.log($ionicSlideBoxDelegate.currentIndex());
+				//console.log($ionicSlideBoxDelegate.currentIndex());
 				$scope.openModal($ionicSlideBoxDelegate.currentIndex())
 			}, 500);
 		}
