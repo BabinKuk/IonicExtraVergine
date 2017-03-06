@@ -39,7 +39,10 @@ angular.module('extravergine', ['ionic', 'extravergine.controllers', 'extravergi
 	// back button handling
 	$ionicPlatform.registerBackButtonAction(function (event) {
 		
-		// alert dialog
+		event.preventDefault();
+		console.log("back button action handler");
+		console.log($state.current);
+		/*// alert dialog
 		$scope.showAlert = function() {
 			var alertPopup = $ionicPopup.alert({
 				title: $state.current.name,
@@ -50,7 +53,7 @@ angular.module('extravergine', ['ionic', 'extravergine.controllers', 'extravergi
 				console.log($state.current.name);
 			});
 		};
-		
+		*/
 		/*
 		if($state.current.name == "tab.home"){
 			console.log('tab.home');
@@ -68,7 +71,7 @@ angular.module('extravergine', ['ionic', 'extravergine.controllers', 'extravergi
 			//console.log('app.backhistory');
 			navigator.app.backHistory();
 		}*/
-	}, 100);
+	}, 999);
 })
 
 .config(function($stateProvider, $urlRouterProvider, $translateProvider, $ionicConfigProvider) {
