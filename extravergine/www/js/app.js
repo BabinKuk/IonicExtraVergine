@@ -35,43 +35,6 @@ angular.module('extravergine', ['ionic', 'extravergine.controllers', 'extravergi
 		console.log('platform: ' +  deviceInformation.platform);
 		console.log('udid: ' + deviceInformation.uuid);*/
 	});
-	
-	// back button handling
-	$ionicPlatform.registerBackButtonAction(function (event) {
-		
-		event.preventDefault();
-		console.log("back button action handler");
-		console.log($state.current);
-		/*// alert dialog
-		$scope.showAlert = function() {
-			var alertPopup = $ionicPopup.alert({
-				title: $state.current.name,
-				template: $state.current.name
-			});
-			
-			alertPopup.then(function(res) {
-				console.log($state.current.name);
-			});
-		};
-		*/
-		/*
-		if($state.current.name == "tab.home"){
-			console.log('tab.home');
-			//navigator.app.exitApp(); //<-- remove this line to disable the exit
-			
-			$ionicPopup.confirm({
-				title: 'System warning',
-				template: 'Are you sure you want to exit?'
-			}).then(function(res) {
-				if (res) {
-					ionic.Platform.exitApp();
-				}
-			})
-		} else {
-			//console.log('app.backhistory');
-			navigator.app.backHistory();
-		}*/
-	}, 999);
 })
 
 .config(function($stateProvider, $urlRouterProvider, $translateProvider, $ionicConfigProvider) {

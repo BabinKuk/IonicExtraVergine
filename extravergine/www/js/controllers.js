@@ -1,6 +1,6 @@
 angular.module('extravergine.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $translate, $ionicPopup) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $translate, $ionicPopup, $ionicPlatform) {
 
 	// With the new view caching in Ionic, Controllers are only called
 	// when they are recreated or on app start, instead of every page change.
@@ -23,7 +23,6 @@ angular.module('extravergine.controllers', [])
 	
 	$scope.sendMail = function(){
 		//console.log('sendMail ' + $scope.deviceInformation);
-		
 		$scope.deviceInformation = getDeviceInfo();
 		//console.log($scope.deviceInformation);
 		
@@ -53,6 +52,42 @@ angular.module('extravergine.controllers', [])
 			}
 		});
 	};*/
+	
+	// back button handling
+	$ionicPlatform.registerBackButtonAction(function (event) {
+		event.preventDefault();
+		console.log("back button action handler");
+		console.log($state.current);
+		/*// alert dialog
+		$scope.showAlert = function() {
+			var alertPopup = $ionicPopup.alert({
+				title: $state.current.name,
+				template: $state.current.name
+			});
+			
+			alertPopup.then(function(res) {
+				console.log($state.current.name);
+			});
+		};
+		*/
+		/*
+		if($state.current.name == "tab.home"){
+			console.log('tab.home');
+			//navigator.app.exitApp(); //<-- remove this line to disable the exit
+			
+			$ionicPopup.confirm({
+				title: 'System warning',
+				template: 'Are you sure you want to exit?'
+			}).then(function(res) {
+				if (res) {
+					ionic.Platform.exitApp();
+				}
+			})
+		} else {
+			//console.log('app.backhistory');
+			navigator.app.backHistory();
+		}*/
+	}, 100);
 	
 })
 
