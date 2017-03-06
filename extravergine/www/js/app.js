@@ -169,6 +169,7 @@ function getDeviceInfo() {
 	return ionic.Platform.device();
 }
 
+/*
 // display popup to exit app
 function showExitAppPopup(ionicPopup){
 	console.log('showExitAppPopup');
@@ -187,9 +188,4 @@ function showExitAppPopup(ionicPopup){
 		}
 	});
 }
-
-// get popup text translations
-function getPopupText(lang){
-	console.log('getPopupText ' + lang);
-	return translations[lang];
-}
+*/

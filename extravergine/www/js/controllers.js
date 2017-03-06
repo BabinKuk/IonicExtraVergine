@@ -1,6 +1,6 @@
 angular.module('extravergine.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $translate, $ionicPopup, $ionicPlatform) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $translate, $ionicPopup, $ionicPlatform, $state) {
 
 	// With the new view caching in Ionic, Controllers are only called
 	// when they are recreated or on app start, instead of every page change.
@@ -32,16 +32,37 @@ angular.module('extravergine.controllers', [])
 		window.open(mailto, '_system')
 	}
 	
-	//exit app popup
+	// exit app popup
 	$scope.showPopup = function(){
-		showExitAppPopup($ionicPopup);
+		showExitAppPopup();
 	};
-	/*$scope.showPopup = function() {
+	
+	// back button handling
+	$ionicPlatform.registerBackButtonAction(function (event) {
+		event.preventDefault();
+		console.log("back button action handler");
+		console.log($state.current);
+		/*
+		if($state.current.name == "app.cultivars"){
+			console.log('home page -> exit app');
+			showExitAppPopup();
+			//navigator.app.exitApp(); //<-- remove this line to disable the exit
+		} else {
+			console.log('app.backhistory');
+			navigator.app.backHistory();
+		}*/
+	}, 100);
+	
+	// exit app handler function
+	function showExitAppPopup(){
+		console.log('showExitAppPopup');
 		console.log(translations);
+		//test
+		console.log($state.current);
 		var popupText = getPopupText(getLanguage());
 		console.log(popupText.attention);
 
-		// An elaborate, custom popup
+		// custom popup
 		var confirmPopup = $ionicPopup.confirm({
 			title: popupText.attention,
 			type: 'button-balanced',
@@ -51,43 +72,13 @@ angular.module('extravergine.controllers', [])
 				ionic.Platform.exitApp();
 			}
 		});
-	};*/
+	}
 	
-	// back button handling
-	$ionicPlatform.registerBackButtonAction(function (event) {
-		event.preventDefault();
-		console.log("back button action handler");
-		console.log($state.current);
-		/*// alert dialog
-		$scope.showAlert = function() {
-			var alertPopup = $ionicPopup.alert({
-				title: $state.current.name,
-				template: $state.current.name
-			});
-			
-			alertPopup.then(function(res) {
-				console.log($state.current.name);
-			});
-		};
-		*/
-		/*
-		if($state.current.name == "tab.home"){
-			console.log('tab.home');
-			//navigator.app.exitApp(); //<-- remove this line to disable the exit
-			
-			$ionicPopup.confirm({
-				title: 'System warning',
-				template: 'Are you sure you want to exit?'
-			}).then(function(res) {
-				if (res) {
-					ionic.Platform.exitApp();
-				}
-			})
-		} else {
-			//console.log('app.backhistory');
-			navigator.app.backHistory();
-		}*/
-	}, 100);
+	// get popup text translations
+	function getPopupText(lang){
+		console.log('getPopupText ' + lang);
+		return translations[lang];
+	}
 	
 })
 
