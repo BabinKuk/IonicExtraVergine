@@ -35,6 +35,40 @@ angular.module('extravergine', ['ionic', 'extravergine.controllers', 'extravergi
 		console.log('platform: ' +  deviceInformation.platform);
 		console.log('udid: ' + deviceInformation.uuid);*/
 	});
+	
+	// back button handling
+	$ionicPlatform.registerBackButtonAction(function (event) {
+		
+		// alert dialog
+		$scope.showAlert = function() {
+			var alertPopup = $ionicPopup.alert({
+				title: $state.current.name,
+				template: $state.current.name
+			});
+			
+			alertPopup.then(function(res) {
+				console.log($state.current.name);
+			});
+		};
+		
+		/*
+		if($state.current.name == "tab.home"){
+			console.log('tab.home');
+			//navigator.app.exitApp(); //<-- remove this line to disable the exit
+			
+			$ionicPopup.confirm({
+				title: 'System warning',
+				template: 'Are you sure you want to exit?'
+			}).then(function(res) {
+				if (res) {
+					ionic.Platform.exitApp();
+				}
+			})
+		} else {
+			//console.log('app.backhistory');
+			navigator.app.backHistory();
+		}*/
+	}, 100);
 })
 
 .config(function($stateProvider, $urlRouterProvider, $translateProvider, $ionicConfigProvider) {
@@ -167,4 +201,29 @@ function getLanguage(){
 function getDeviceInfo() {
 	//console.log(ionic.Platform.device());
 	return ionic.Platform.device();
+}
+
+// display popup to exit app
+function showExitAppPopup(ionicPopup){
+	console.log('showExitAppPopup');
+	console.log(translations);
+	var popupText = getPopupText(getLanguage());
+	console.log(popupText.attention);
+
+	// custom popup
+	var confirmPopup = ionicPopup.confirm({
+		title: popupText.attention,
+		type: 'button-balanced',
+		template: popupText.attentionDesc
+	}).then(function(res) {
+		if (res) {
+			ionic.Platform.exitApp();
+		}
+	});
+}
+
+// get popup text translations
+function getPopupText(lang){
+	console.log('getPopupText ' + lang);
+	return translations[lang];
 }

@@ -33,8 +33,11 @@ angular.module('extravergine.controllers', [])
 		window.open(mailto, '_system')
 	}
 	
-	//alert dialog
-	$scope.showPopup = function() {
+	//exit app popup
+	$scope.showPopup = function(){
+		showExitAppPopup($ionicPopup);
+	};
+	/*$scope.showPopup = function() {
 		console.log(translations);
 		var popupText = getPopupText(getLanguage());
 		console.log(popupText.attention);
@@ -49,12 +52,7 @@ angular.module('extravergine.controllers', [])
 				ionic.Platform.exitApp();
 			}
 		});
-	};
-	
-	function getPopupText(lang){
-		console.log('getPopupText ' + lang);
-		return translations[lang];
-	}
+	};*/
 	
 })
 
@@ -70,10 +68,10 @@ angular.module('extravergine.controllers', [])
 	$scope.cultivar = '';
 	$scope.modal = '';
 	
-	$ionicPlatform.registerBackButtonAction(function (event) { 
+	$ionicPlatform.registerBackButtonAction(function (event) {
 		event.preventDefault();
 		console.log('back button action handler');
-		showPopup();
+		//showPopup();
 	}, 999);
 	
 	//check id first
