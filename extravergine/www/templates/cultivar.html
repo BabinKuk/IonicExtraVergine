@@ -2,47 +2,53 @@
 	<ion-nav-title>{{cultivar.title}}</ion-nav-title>
 	<ion-content class="padding">
 		
-		<div class="list card">
-			<div class="item item-image">
-				<img ng-src="{{cultivar.image}}"/>
-			</div>
-			
-			<div class="item item-divider">
-				{{'origin'|translate}}
-			</div>
-			<div class="item item-text-wrap">
-				{{cultivar.origin}}
-			</div>
-			
-			<div class="item item-divider">
-				{{'characteristics'|translate}}
+		<div class="row responsive-lg">
+			<div class="col col-50">
+				<div class="list card">
+					<div class="item item-image">
+						<img ng-src="{{cultivar.image}}"/>
+					</div>
 				</div>
-			<div class="item item-text-wrap">
-				{{cultivar.characteristics}}
 			</div>
-			<div class="item item-divider">
-				{{'productivity'|translate}}
-			</div>
-			<div class="item item-text-wrap">
-				{{cultivar.productivity}}
-			</div>
-			<div class="item item-divider">
-				{{'pollination'|translate}}
-			</div>
-			<div class="item item-text-wrap">
-				{{cultivar.pollination}}
-			</div>
-			<div class="item item-divider">
-				{{'resistance'|translate}}
-			</div>
-			<div class="item item-text-wrap">
-				{{cultivar.resistance}}
-			</div>
-			<div class="item item-divider">
-				{{'oil'|translate}}
-			</div>
-			<div class="item item-text-wrap">
-				{{cultivar.oil}}
+			<div class="col col-50">
+				<div class="list card">
+					<div class="item item-divider">
+						{{'origin'|translate}}
+					</div>
+					<div class="item item-text-wrap">
+						{{cultivar.origin}}
+					</div>
+					<div class="item item-divider">
+						{{'characteristics'|translate}}
+						</div>
+					<div class="item item-text-wrap">
+						{{cultivar.characteristics}}
+					</div>
+					<div class="item item-divider">
+						{{'productivity'|translate}}
+					</div>
+					<div class="item item-text-wrap">
+						{{cultivar.productivity}}
+					</div>
+					<div class="item item-divider">
+						{{'pollination'|translate}}
+					</div>
+					<div class="item item-text-wrap">
+						{{cultivar.pollination}}
+					</div>
+					<div class="item item-divider">
+						{{'resistance'|translate}}
+					</div>
+					<div class="item item-text-wrap">
+						{{cultivar.resistance}}
+					</div>
+					<div class="item item-divider">
+						{{'oil'|translate}}
+					</div>
+					<div class="item item-text-wrap">
+						{{cultivar.oil}}
+					</div>
+				</div>
 			</div>
 		</div>
 		

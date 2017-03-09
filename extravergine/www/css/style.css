@@ -198,6 +198,12 @@ p.info {
     display:none;
 }
 
+/* override default */
+.list:last-child.card {
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
 /* Fix modal backdrop for smaller devices */
 @media (min-width: 679px) {
 	.active .modal-backdrop-bg {
