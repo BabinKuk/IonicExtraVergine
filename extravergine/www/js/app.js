@@ -68,6 +68,15 @@ angular.module('extravergine', ['ionic', 'extravergine.controllers', 'extravergi
 			}
 		}
 	})
+	.state('app.sources', {
+		url: '/sources',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/sources.html'
+			}
+		}
+	})
+	
 	.state('app.cultivars', {
 		url: '/cultivars',
 		views: {
