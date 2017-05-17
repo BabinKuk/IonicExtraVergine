@@ -26,7 +26,9 @@ angular.module('extravergine.controllers', [])
 		$scope.deviceInformation = getDeviceInfo();
 		//console.log($scope.deviceInformation);
 		
-		var mailto = 'mailto:dolija@dolija.com?subject=ExtraVergine App Feedback&body=' + $scope.deviceInformation.name + ', ' + $scope.deviceInformation.version + ', ' + $scope.deviceInformation.platform + ', ' + $scope.deviceInformation.uuid;
+		//var mailto = 'mailto:dolija@dolija.com?subject=ExtraVergine App Feedback&body=' + $scope.deviceInformation.name + ', ' + $scope.deviceInformation.version + ', ' + $scope.deviceInformation.platform + ', ' + $scope.deviceInformation.uuid;
+		//empty body
+		var mailto = 'mailto:dolija@dolija.com?subject=ExtraVergine App Feedback';
 		//console.log(mailto);
 		
 		window.open(mailto, '_system')
