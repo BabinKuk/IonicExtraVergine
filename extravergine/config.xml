@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.extravergine893900" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.babinkuk.extravergine" version="1.5.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Extra Vergine</name>
   <description>
-        ExtraVergine: An Ionic Framework and Cordova project.
+        Short guide to olives (olive varieties, calendar works, disease and pests)
     </description>
-  <author email="nikola.babic@gmail.com" href="http://example.com.com/">
+  <author email="nikola.babic@gmail.com" href="https://www.dolija.com/">
       Babin Kuk
     </author>
   <content src="index.html"/>
