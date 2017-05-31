@@ -205,6 +205,7 @@ p.info {
 }
 
 /* Fix modal backdrop for smaller devices */
+
 @media (min-width: 679px) {
 	.active .modal-backdrop-bg {
 		opacity: .5;
@@ -242,8 +243,11 @@ p.info {
 	}
 }
 
-/* Fix modal backdrop for bigger devices */
-
+@media (max-width: 567px) {
+	.responsive-sm .col-33 {
+		margin-bottom: 0;
+	}
+}
 
 @media (min-width: 799px) {
 	#img-table{
